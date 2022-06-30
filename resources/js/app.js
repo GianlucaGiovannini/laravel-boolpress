@@ -8,8 +8,15 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
+
+import router from './router';
 import App from './views/App';
 
+
+
+window.axios = require('axios');
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -19,5 +26,6 @@ import App from './views/App';
 
 const app = new Vue({
     el: '#app',
-    render: h => h(App) // mostriamo App all'avvio di Vue
+    render: h => h(App),
+    router,
 });

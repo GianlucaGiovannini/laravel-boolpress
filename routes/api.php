@@ -75,6 +75,7 @@ Route::get('posts', function () {
 }); */
 
 Route::get('posts', 'API\PostController@index');
+Route::get('posts/{post:slug}', 'API\PostController@show');
 Route::get('categories', 'API\CategoryController@index');
 Route::get('tags', 'API\TagController@index');
 
