@@ -11,15 +11,15 @@
         <section class="recent_articles">
             <div class="container py-4">
                 <h2>Recent Articles</h2>
-                <div class="row py-5">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 py-5 g-3">
                     <div class="col" v-for="post in posts" :key="post.id">
                         <div class="card">
-                            <img :src="'/storage/' + post.cover_image" :alt="post.title">
+                            <img class="img-fluid" :src="'/storage/' + post.cover_image" :alt="post.title">
                             <div class="card-body">
                                 <p>
                                     {{post.content.slice(0, 200) + '...'}}
                                 </p>
-                                <a href="#">Read More</a>
+                                <router-link :to="{ name: 'post', params: {slug: post.slug}}">Read more</router-link>
                             </div>
                         </div>
                     </div>
@@ -61,3 +61,12 @@ export default {
 }
 
 </script>
+
+<style lang="scss" scoped>
+.card {
+    img {
+        min-height: 300px;
+    }
+}
+
+</style>
