@@ -4,40 +4,40 @@
         <!-- use router-link component for navigation. -->
         <!-- specify the link by passing the `to` prop. -->
         <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-            <header>
-                <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <router-link class="navbar-brand" :to="{ name: 'home' }">
-                    BoolPress
-                </router-link>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                <div class="container">
+                    <router-link class="navbar-brand" :to="{ name: 'home' }">
+                        BoolPress
+                    </router-link>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item" v-for="item in menu_items" :key="item.id">
-                            <router-link class="nav-link" :to="{ name: item.route_name }">{{ item.route_text }}
-                            </router-link>
-                        </li>
-                    </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto"> </ul>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item" v-for="item in menu_items" :key="item.id">
+                                <router-link class="nav-link" :to="{ name: item.route_name }">{{ item.route_text }}
+                                </router-link>
+                            </li>
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto"> </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-            </header>
-        
+            </nav>
+        </header>
+
 
         <!-- route outlet -->
         <!-- component matched by the route will render here -->
         <main>
             <router-view></router-view>
         </main>
-        
+
 
         <footer class="bg-dark text-white text-center py-3">
             <p>
@@ -58,18 +58,22 @@ export default {
         return {
             menu_items: [
                 {
+                    id: 1,
                     route_name: 'home',
                     route_text: 'Home'
                 },
                 {
+                    id: 2,
                     route_name: 'about',
                     route_text: 'About'
                 },
                 {
+                    id: 3,
                     route_name: 'posts',
                     route_text: 'Blog'
                 },
                 {
+                    id: 4,
                     route_name: 'contacts',
                     route_text: 'Contacts'
                 }

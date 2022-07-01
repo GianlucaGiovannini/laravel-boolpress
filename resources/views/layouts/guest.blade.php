@@ -1,6 +1,3 @@
-
-
-<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -13,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/front.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,19 +21,7 @@
 </head>
 
 <body>
-
-    <div class="container py-5">
-    
-        @if(session('message'))
-    
-            <h1 class="py-4">{{session('message')}}</h1>
-    
-            <a class="btn btn-primary" href="/">Go back to the site</a>
-        @endif
-    
-    </div>
-    
-
+    @yield('content')
 </body>
 
 </html>

@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
-@section('app')
+@section('content')
 
-<div id="app">
+<div id="root">
 
 </div>
 
