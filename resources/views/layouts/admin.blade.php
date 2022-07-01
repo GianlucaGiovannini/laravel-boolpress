@@ -69,6 +69,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.messages.index') }}">
+                                    Messages
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">
                                     Users
                                 </a>
