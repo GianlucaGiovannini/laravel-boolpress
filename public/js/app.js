@@ -5776,6 +5776,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         route_name: 'posts',
         route_text: 'Blog'
+      }, {
+        route_name: 'contacts',
+        route_text: 'Contacts'
       }]
     };
   }
@@ -43015,11 +43018,11 @@ var render = function () {
     _c("div", { staticClass: "container" }, [
       _c(
         "div",
-        { staticClass: "contents py-4" },
+        { staticClass: "contents py-5" },
         [
           _c(
             "vue-form",
-            { attrs: { method: "post", action: "/contact-form" } },
+            { attrs: { method: "POST", action: "/contact-form" } },
             [
               _c("div", { staticClass: "mb-3 d-flex flex-column" }, [
                 _c("label", { staticClass: "form-label", attrs: { for: "" } }, [

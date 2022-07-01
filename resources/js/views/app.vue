@@ -68,6 +68,10 @@ export default {
                 {
                     route_name: 'posts',
                     route_text: 'Blog'
+                },
+                {
+                    route_name: 'contacts',
+                    route_text: 'Contacts'
                 }
             ]
         }

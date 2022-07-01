@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
-use App\Models\Message;
 use App\Http\Controllers\Controller;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -15,18 +14,11 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::all();
+        return view('admin.messages.index' , compact('messages'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +28,11 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        ddd($request->all());
+
+
+
     }
 
     /**
@@ -48,6 +44,7 @@ class MessageController extends Controller
     public function show(Message $message)
     {
         //
+        return view('admin.messages.show' , compact('message'));
     }
 
     /**

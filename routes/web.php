@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 });
  */
 
- Route::get('contact-form', 'MessageController@index')->name('contact.form.index');
+ Route::get('contacts', 'MessageController@index')->name('contact.form.index');
  Route::post('contact-form', 'MessageController@store');
 
 

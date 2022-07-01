@@ -13,10 +13,10 @@
 
 
         <div class="container">
-            <div class="contents py-4">
+            <div class="contents py-5">
 
 
-                <vue-form method="post" action="/contact-form">
+                <vue-form method="POST" action="/contact-form">
                     <div class="mb-3 d-flex flex-column">
                         <label for="" class="form-label">Full Name</label>
                         <input type="text" name="full_name" id="full_name" class="Your Name" placeholder="Mario Rossi"
